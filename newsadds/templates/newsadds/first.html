@@ -1,0 +1,30 @@
+{% extends 'primary.html'%}
+{% load static %}
+       <link rel="stylesheet" href="{%static 'css/card.css'%}">
+
+     {% block content %}
+
+             {%for a in news1%}
+               <figure class="snip1579"><img src="{{a.image_news1.url}}" alt="profile-sample2" />
+                  <figcaption>
+                     <h3>Breaking News</h3>
+
+                     <blockquote>
+                          <p>{{a.title_news}}</p>
+                         <p>{{a.auteur_news}}</p>
+                         <P> click to read more</P>
+                     </blockquote>
+                  </figcaption><a href="#"></a>
+               </figure>
+             {%endfor%}
+                  <script type="javascript">
+                        $(".hover").mouseleave(
+                         function () {
+                             $(this).removeClass("hover");
+                          }
+                         );
+                  </script>
+     {%endblock%}
+
+
+

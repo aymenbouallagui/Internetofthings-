@@ -1,0 +1,107 @@
+<html>
+   <head>
+       {% load static %}
+       <title>MartialArtsLovers.com</title>
+       <link rel="stylesheet" href="{%static 'css/card.css'%}">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+          .redom {
+               margin-top:10px;
+               width: 600px;
+               height: 100px;
+               background-color:firebrick;
+               position: relative;
+               animation: myfirst 5s linear 2s infinite alternate;
+          }
+          .msg1 {
+                text-align: center ;
+                padding-top: 10px;
+                color: azure;
+          }
+          .msg2{
+                text-align: center ;
+                margin-top: 10px;
+                color: azure;
+          }
+          @keyframes myfirst {
+              0%   {background-color:firebrick; left:0px; top:0px;}
+              25%  {background-color:black; left:250px; top:0px;}
+              50%  {background-color:brown; left:400px; top:0px;}
+              75%  {background-color:black; left:650px; top:0px;}
+              100% {background-color:white; left:850px; top:0px;}
+           }
+     </style>
+   </head>
+   <body style="background-color:lightsteelblue">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark position-sticky" >
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+               <a class="navbar-brand" href="#">
+                  <img src="{% static 'images/martiala.jpg' %}" width="35" height="30" class="d-inline-block align-top" alt="" loading="lazy" style="margin-left: 150px;border-radius:10%">
+
+                  </a>
+             <a class="navbar-brand" href="#" style="font-family:fantasy;color:white;margin-left: 20px;margin-bottom: -5px ">Martial Arts Lovers</a>
+            <li class="nav-item active" style="margin-left: 100px ">
+              <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+               <a class="navbar-brand" href="https://www.facebook.com/Oussama.Bouallagui99" style="margin-top: 6px;">
+                  <img src="{% static 'images/facebooklogo.png' %}" width="20" height="20" class="d-inline-block align-top" alt="" loading="lazy" style="margin-left:150px;border-radius:30%">
+                  </a>
+              <a class="navbar-brand" href="https://www.instagram.com/martial_arts.lovers/" style="margin-top: 6px;">
+                  <img src="{% static 'images/instalogo.jpg' %}" width="20" height="20" class="d-inline-block align-top" alt="" loading="lazy" style=" background-color:transparent;border-radius:30%">
+                  </a>
+              <a class="navbar-brand" href="https://www.youtube.com/channel/UCtwNlJ3kGpH54v-TWI-rRfA" style="margin-top: 6px;">
+                  <img src="{% static 'images/youtlogo.png' %}" width="20" height="20" class="d-inline-block align-top" alt="" loading="lazy" style="border-radius:30%" >
+                  </a>
+            <li>
+              <form class="form-inline" style="margin-left: 40px;margin-bottom: 4px" >
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="height: 30px">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  >Search *</button>
+                </form>
+              </li>
+           </ul>
+        </div>
+      </nav>
+      </div>
+      </div>
+      <div class="redom">
+
+                 <h3 class="msg1">Martial Arts Lovers </h3>
+                 <h5 class="msg2">The Pitch is Ours </h5>
+
+      </div>
+      <div class="row  col-xs-3 col-lg-12" style="margin-top:25px;margin-left:5" >
+           {% block content%}
+
+           {% endblock %}
+      </div>
+
+    <div style="background-color: black; height: 330px;"  >
+        <div class="row">
+            <div class="container-fluid col-xs-12 col-lg-2">
+               <img src="{% static 'images/martiala.jpg' %}" width="200px" height="200px" style="padding-left: 25px;padding-top: 50px">
+            </div>
+            <div class="container-fluid col-xs-12 col-lg-9" style="margin-top:30px;">
+                <h1 style="color:white">About Us :</h1>
+                   <p style="color: white">MartialArtsLovers.com is news and shopping entertainment website From Tunisia .</p>
+                   <p style="color: white">We provide you with the latest breaking news, </p>
+                   <p style="color: white">reviews and interviews straight from the entertainment industry.</p>
+                   <p style="color: white">M.A.L 2020© </p>
+                   <h9 style="color: white">IT partner : Prod19© <br>Prod19 : Bouallaguino@gmail.com</h9>
+            </div>
+
+        </div>
+     </div>
+    </body>
+</html>
